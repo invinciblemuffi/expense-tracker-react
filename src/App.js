@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseView from "./components/ExpenseView";
 
 function App() {
+  const [expData, setExpData] = useState([]);
+  const setExpenseData = (data) => {
+    setExpData(data);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row justify-content-center">
+        <div className="col-4">
+          <h1 className="my-5 text-center text-warning bg-light p-3 rounded">
+            Expense Tracker App
+          </h1>
+          <ExpenseForm expData={expData} setExpenseData={setExpenseData} />
+          <ExpenseView expData={expData} />
+        </div>
+      </div>
     </div>
   );
 }
