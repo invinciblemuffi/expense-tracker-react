@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
 
-const ExpenseForm = (props) => {
-  const [expName, setExpName] = useState("");
-  const [expAmt, setExpAmt] = useState("");
-  const [expDate, setExpDate] = useState("");
+const ExpenseForm = ({
+  expName,
+  expAmt,
+  expDate,
+  setExpName,
+  setExpAmt,
+  setExpDate,
+  expData,
+  setExpenseData,
+  isEditing,
+  saveData,
+  editData,
+}) => {
   const [isDisabled, setIsDisabled] = useState(true);
   const maxDate = new Date().toISOString().split("T")[0];
-
-  const expData = props.expData;
 
   useEffect(() => {
     expName.trim() !== "" && expAmt.length !== 0 && expDate.length !== 0
@@ -18,7 +25,10 @@ const ExpenseForm = (props) => {
   const formHandler = (e) => {
     e.preventDefault();
     const newExpData = { expName, expAmt, expDate };
-    props.setExpenseData([...expData, newExpData]);
+    isEditing ? editData(newExpData) : saveData(newExpData);
+    // Use below line only when not fetching data from server.
+    // Below line will update the prevState with the new User Obj and also trigger UI re-render
+    // !isEditing && setExpenseData([...expData, newExpData]);
     clearFields();
   };
 
@@ -77,7 +87,7 @@ const ExpenseForm = (props) => {
           disabled={isDisabled}
           style={{ cursor: isDisabled ? "not-allowed" : "pointer" }}
         >
-          Save
+          {isEditing ? "Edit" : "Save"}
         </button>
       </div>
     </form>
