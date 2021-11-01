@@ -50,7 +50,7 @@ const ExpenseView = (props) => {
         <tfoot className="table-dark">
           <tr>
             <th scope="row" colSpan="3">
-              Total:
+              Total Expense:
             </th>
             <td colSpan="2">{props.total}</td>
           </tr>
