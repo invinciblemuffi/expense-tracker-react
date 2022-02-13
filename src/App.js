@@ -13,6 +13,13 @@ function App() {
   const [total, setTotal] = useState(0);
 
   async function fetchExpenses() {
+    async function getData() {
+      const resp = await fetch(`http://localhost:3500/`);
+      const data = await resp.text();
+      console.log(data);
+    }
+    getData();
+
     const responseObj = await fetch(`${process.env.REACT_APP_BASE_URL}`);
     const responseData = await responseObj.json();
     console.log(responseData);
