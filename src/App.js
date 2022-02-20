@@ -64,7 +64,9 @@ function App() {
     );
     const res = await response.json();
     console.log(res, "response received from server");
-    fetchExpenses();
+    if (data.code === 1) {
+      fetchExpenses();
+    }
   };
 
   const deleteExpRow = async (id) => {
@@ -76,7 +78,9 @@ function App() {
     );
     const data = await response.json();
     console.log(data);
-    fetchExpenses();
+    if (data.code === 1) {
+      fetchExpenses();
+    }
   };
 
   const editData = async (editedData) => {
@@ -95,7 +99,9 @@ function App() {
     const data = await response.json();
     console.log(data);
     setIsEditing(false);
-    fetchExpenses();
+    if (data.code === 1) {
+      fetchExpenses();
+    }
   };
 
   return (
