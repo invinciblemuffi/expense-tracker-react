@@ -1,20 +1,22 @@
 # Expense Tracker App along with CRUD operations
-## App deployed at - [expense-tracker-frontend](https://expense-tracker-react-frontend.herokuapp.com/)
-## Available Scripts
 
-In the project directory, you can run:
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Vanilla DOM methods to interact with DOM vs. ReactDOM with interactive behaviour
+- React is all about components
+- create-react-app and its package.json
+- JSX (JavaScript XML or HTML where you can add your custom html tags)
+- Add CSS withing JSX
+- props for data passing
+- Composition (props.children)
+- Event and event handlers
+- Working with state variables vs normal variables - useState
+- Form input elements with on<EvenetHandlerName>
+- ...prevState example and its benefits
+- Single state variable vs one state object containing multiple variables
+- Form Submission and 2-way data binding using input's value attribute
+- Child to parent data biinding (Lifting the state up)
+- Stateless(Presentational/Uncontrolled) vs Stateful(Controlled) comonents
+- Rendering list of data and understanding "key" attribute
+- Debug React Apps from Sources Tab with breakpoints, React Dev Tools
+- Fragments and Refs
+- What are side effects in React? - setTimeout, setInterval, API's
+- Working with useState method.
