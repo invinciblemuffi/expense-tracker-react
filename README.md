@@ -4,12 +4,12 @@
 - React is all about components
 - create-react-app and its package.json
 - JSX (JavaScript XML or HTML where you can add your custom html tags)
-- Add CSS withing JSX
+- Add CSS withing JSX (Dynamic Style and classnames)
 - props for data passing
 - Composition (props.children)
 - Event and event handlers
 - Working with state variables vs normal variables - useState
-- Form input elements with on<EvenetHandlerName>
+- Form input elements with on<EventHandlerName>
 - ...prevState example and its benefits
 - Single state variable vs one state object containing multiple variables
 - Form Submission and 2-way data binding using input's value attribute
